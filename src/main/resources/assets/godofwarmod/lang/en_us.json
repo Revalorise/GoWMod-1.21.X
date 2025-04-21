@@ -3,5 +3,8 @@
   "item.godofwarmod.raw_bismuth": "Raw Bismuth",
 
   "block.godofwarmod.bismuth_block": "Bismuth Block",
-  "block.godofwarmod.bismuth_ore": "Bismuth Ore"
+  "block.godofwarmod.bismuth_ore": "Bismuth Ore",
+
+  "creativetab.godofwarmod.bismuth_items": "Bismuth Items",
+  "creativetab.godofwarmod.bismuth_blocks": "Bismuth Blocks"
 }
