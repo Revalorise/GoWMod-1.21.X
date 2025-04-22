@@ -11,6 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.revalorise.gowmod.GodOfWarMod;
+import net.revalorise.gowmod.block.custom.MagicBlock;
 import net.revalorise.gowmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -42,6 +43,10 @@ public class ModBlocks {
                 .requiresCorrectToolForDrops()
                 .sound(SoundType.STONE))
     );
+
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
+        () -> new MagicBlock(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
