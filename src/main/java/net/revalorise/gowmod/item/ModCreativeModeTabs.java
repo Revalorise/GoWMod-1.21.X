@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
             .displayItems((featureFlagSet, output) -> {
                 output.accept(ModItems.BISMUTH.get());
                 output.accept(ModItems.RAW_BISMUTH.get());
+                output.accept(ModItems.CHISEL.get());
             })
             .build());
 
