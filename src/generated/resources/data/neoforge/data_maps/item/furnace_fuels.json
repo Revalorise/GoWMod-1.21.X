@@ -1,0 +1,10 @@
+{
+  "values": {
+    "godofwarmod:frostfire_ice": {
+      "burn_time": 1200
+    },
+    "godofwarmod:starlight_ashes": {
+      "burn_time": 1200
+    }
+  }
+}

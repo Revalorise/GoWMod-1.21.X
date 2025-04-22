@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
+    "A": {
       "item": "godofwarmod:bismuth"
     }
   },
   "pattern": [
-    "BBB",
-    "BBB",
-    "BBB"
+    "AAA",
+    "AAA",
+    "AAA"
   ],
   "result": {
     "count": 1,

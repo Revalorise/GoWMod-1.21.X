@@ -1,0 +1,13 @@
+// 1.21.1	2025-04-22T14:35:29.0004367	Block States: godofwarmod
+4cdba1e1c90b76091c36e11226161848ee93cae2 assets/godofwarmod/blockstates/bismuth_block.json
+f1ba35efcceaf2d7eac5d06ca314432a9a5caf17 assets/godofwarmod/blockstates/bismuth_deepslate_ore.json
+c0539d11999d0f2991d79045c8af123a581ede34 assets/godofwarmod/blockstates/bismuth_ore.json
+fc39246a4dc8ad9e2352297935e9b268c6162198 assets/godofwarmod/blockstates/magic_block.json
+0307f7b9e6cf360cf022e844135c04ec34e26f0f assets/godofwarmod/models/block/bismuth_block.json
+692d84811168ed68e35b0896519404c66507315b assets/godofwarmod/models/block/bismuth_deepslate_ore.json
+1d356f741196b4af69fed842cf584c1f3c4eb70b assets/godofwarmod/models/block/bismuth_ore.json
+179e314e6135f47a50b68332425812d49d392105 assets/godofwarmod/models/block/magic_block.json
+878d8ca3fac1aa9c15643b34431ac1695164c4c6 assets/godofwarmod/models/item/bismuth_block.json
+ccec3a222438f393e3410f16763d92e068311c2e assets/godofwarmod/models/item/bismuth_deepslate_ore.json
+d042727abd7fffe498d69277ef05bc48ed3ce323 assets/godofwarmod/models/item/bismuth_ore.json
+80a4b5a9c872f522323bdb0b47735de3dcc1348d assets/godofwarmod/models/item/magic_block.json
