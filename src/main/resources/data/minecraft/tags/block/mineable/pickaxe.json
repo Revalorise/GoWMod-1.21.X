@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "godofwarmod:bismuth_block",
+    "godofwarmod:bismuth_ore",
+    "godofwarmod:bismuth_deepslate_ore"
+  ]
+}

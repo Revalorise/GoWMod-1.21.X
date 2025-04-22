@@ -22,8 +22,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BISMUTH_BLOCK = registerBlock("bismuth_block",
         () -> new Block(Block.Properties.of()
-            .mapColor(net.minecraft.world.level.material.MapColor.METAL)
-            .strength(5.0F, 6.0F)
+            .strength(3f)
             .requiresCorrectToolForDrops()
             .sound(SoundType.METAL))
     );
@@ -31,8 +30,15 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BISMUTH_ORE = registerBlock("bismuth_ore",
         () -> new DropExperienceBlock(UniformInt.of(2, 4),
             BlockBehaviour.Properties.of()
-                .mapColor(net.minecraft.world.level.material.MapColor.STONE)
-                .strength(3.0F, 3.0F)
+                .strength(3f)
+                .requiresCorrectToolForDrops()
+                .sound(SoundType.STONE))
+    );
+
+    public static final DeferredBlock<Block> BISMUTH_DEEPSLATE_ORE = registerBlock("bismuth_deepslate_ore",
+        () -> new DropExperienceBlock(UniformInt.of(2, 4),
+            BlockBehaviour.Properties.of()
+                .strength(4f)
                 .requiresCorrectToolForDrops()
                 .sound(SoundType.STONE))
     );

@@ -32,8 +32,9 @@ public class ModCreativeModeTabs {
             .withTabsBefore(ResourceLocation.fromNamespaceAndPath(GodOfWarMod.MOD_ID, "bismuth_items_tab"))
             .title(Component.translatable("Bismuth Blocks"))
             .displayItems((featureFlagSet, output) -> {
-                output.accept(ModItems.BISMUTH.get());
-                output.accept(ModItems.RAW_BISMUTH.get());
+                output.accept(ModBlocks.BISMUTH_BLOCK.get());
+                output.accept(ModBlocks.BISMUTH_ORE.get());
+                output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
             })
             .build());
 

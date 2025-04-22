@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "godofwarmod:block/bismuth_deepslate_ore"
+  }
+}
