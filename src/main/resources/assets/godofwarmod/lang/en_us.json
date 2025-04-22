@@ -13,5 +13,10 @@
   "block.godofwarmod.magic_block": "Magic Block",
 
   "creativetab.godofwarmod.bismuth_items": "Bismuth Items",
-  "creativetab.godofwarmod.bismuth_blocks": "Bismuth Blocks"
+  "creativetab.godofwarmod.bismuth_blocks": "Bismuth Blocks",
+
+  "tooltip.gowmod.magic_block.tooltip": "This Block is very §9MAGICAL",
+  "tooltip.gowmod.chisel.shift_down": "This Item can change chisel Blocks",
+  "tooltip.gowmod.chisel": "Press §eShift§r for more information",
+  "tooltip.gowmod.radish.tooltip": "Tastes really good"
 }
