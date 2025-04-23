@@ -1,7 +1,11 @@
 package net.revalorise.gowmod;
 
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.revalorise.gowmod.block.ModBlocks;
+import net.revalorise.gowmod.entity.ModEntities;
+import net.revalorise.gowmod.entity.client.TomahawkProjectileRenderer;
 import net.revalorise.gowmod.item.ModCreativeModeTabs;
 import net.revalorise.gowmod.item.ModItems;
 import org.slf4j.Logger;
@@ -86,7 +90,7 @@ public class GodOfWarMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
         }
     }
 }

@@ -29,6 +29,8 @@ public class ModCreativeModeTabs {
 
                 output.accept(ModItems.FROSTFIRE_ICE.get());
                 output.accept(ModItems.STARLIGHT_ASHES.get());
+
+                output.accept(ModItems.TOMAHAWK.get());
             })
             .build());
 

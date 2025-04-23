@@ -7,6 +7,8 @@
   "item.godofwarmod.frostfire_ice": "Frostfire Ice",
   "item.godofwarmod.starlight_ashes": "Starlight Ashes",
 
+  "item.godofwarmod.tomahawk": "Tomahawk",
+
   "block.godofwarmod.bismuth_block": "Bismuth Block",
   "block.godofwarmod.bismuth_ore": "Bismuth Ore",
   "block.godofwarmod.bismuth_deepslate_ore": "Bismuth Deepslate Ore",
@@ -18,5 +20,7 @@
   "tooltip.gowmod.magic_block.tooltip": "This Block is very §9MAGICAL",
   "tooltip.gowmod.chisel.shift_down": "This Item can change chisel Blocks",
   "tooltip.gowmod.chisel": "Press §eShift§r for more information",
-  "tooltip.gowmod.radish.tooltip": "Tastes really good"
+  "tooltip.gowmod.radish.tooltip": "Tastes really good",
+
+  "entity.godofwarmod.tomahawk": "Tomahawk"
 }
