@@ -63,12 +63,12 @@ public class TomahawkProjectileEntity extends AbstractArrow {
             LightningBolt lightningBolt = EntityType.LIGHTNING_BOLT.create(level);
             // Ensure the lightning bolt was created successfully
             if (lightningBolt != null) {
+                lightningBolt.setDamage(50f);
                 // Set the position of the lightning bolt to the hit entity's position
                 lightningBolt.setPos(hitPos.x, hitPos.y, hitPos.z);
                 // Add the lightning bolt entity to the world
                 level.addFreshEntity(lightningBolt);
             }
-
             // --- End Lightning Bolt ---
 
             // Broadcast event (for client-side effects like particles)
@@ -109,6 +109,7 @@ public class TomahawkProjectileEntity extends AbstractArrow {
                 serverLevel.addFreshEntity(lightningBolt);
             }
 
+
             // Broadcast event (for client-side effects like particles)
             this.level().broadcastEntityEvent(this, (byte) 3);
 
@@ -118,27 +119,26 @@ public class TomahawkProjectileEntity extends AbstractArrow {
             this.level().explode(this, this.getX(), this.getY(), this.getZ(), (float) this.explosionPower, flag,
                 Level.ExplosionInteraction.TRIGGER);
 
-            // Discard the projectile after all effects are triggered
             this.discard();
+        }
 
-            if (result.getDirection() == Direction.SOUTH) {
-                groundedOffset = new Vec2(215f, 180f);
-            }
-            if (result.getDirection() == Direction.NORTH) {
-                groundedOffset = new Vec2(215f, 0f);
-            }
-            if (result.getDirection() == Direction.EAST) {
-                groundedOffset = new Vec2(215f, -90f);
-            }
-            if (result.getDirection() == Direction.WEST) {
-                groundedOffset = new Vec2(215f, 90f);
-            }
-            if (result.getDirection() == Direction.DOWN) {
-                groundedOffset = new Vec2(115f, 180f);
-            }
-            if (result.getDirection() == Direction.UP) {
-                groundedOffset = new Vec2(285f, 180f);
-            }
+        if (result.getDirection() == Direction.SOUTH) {
+            groundedOffset = new Vec2(215f, 180f);
+        }
+        if (result.getDirection() == Direction.NORTH) {
+            groundedOffset = new Vec2(215f, 0f);
+        }
+        if (result.getDirection() == Direction.EAST) {
+            groundedOffset = new Vec2(215f, -90f);
+        }
+        if (result.getDirection() == Direction.WEST) {
+            groundedOffset = new Vec2(215f, 90f);
+        }
+        if (result.getDirection() == Direction.DOWN) {
+            groundedOffset = new Vec2(115f, 180f);
+        }
+        if (result.getDirection() == Direction.UP) {
+            groundedOffset = new Vec2(285f, 180f);
         }
     }
 }
