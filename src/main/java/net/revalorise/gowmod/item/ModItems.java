@@ -1,9 +1,7 @@
 package net.revalorise.gowmod.item;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -43,7 +41,8 @@ public class ModItems {
         () -> new FuelItem(new Item.Properties(), 800));
 
     public static final DeferredItem<Item> TOMAHAWK = ITEMS.register("tomahawk",
-        () -> new TomahawkItem(new Item.Properties().stacksTo(16)));
+        () -> new TomahawkItem(new Item.Properties().durability(1).fireResistant()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

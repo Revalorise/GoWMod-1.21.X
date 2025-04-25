@@ -3,11 +3,14 @@ package net.revalorise.gowmod;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.revalorise.gowmod.block.ModBlocks;
 import net.revalorise.gowmod.entity.ModEntities;
 import net.revalorise.gowmod.entity.client.TomahawkProjectileRenderer;
 import net.revalorise.gowmod.item.ModCreativeModeTabs;
 import net.revalorise.gowmod.item.ModItems;
+import net.revalorise.gowmod.particle.BismuthParticles;
+import net.revalorise.gowmod.particle.ModParticles;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -53,6 +56,8 @@ public class GodOfWarMod
 
         ModEntities.register(modEventBus);
 
+        ModParticles.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -94,6 +99,11 @@ public class GodOfWarMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+            event.registerSpriteSet(ModParticles.BISMUTH_PARTICLES.get(), BismuthParticles.Provider::new);
         }
     }
 }

@@ -2,17 +2,22 @@ package net.revalorise.gowmod.entity.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.revalorise.gowmod.entity.ModEntities;
 import net.revalorise.gowmod.item.ModItems;
+import net.revalorise.gowmod.particle.ModParticles;
 
 public class TomahawkProjectileEntity extends AbstractArrow {
     private int explosionPower = 1;
@@ -108,6 +113,11 @@ public class TomahawkProjectileEntity extends AbstractArrow {
                 // Add the lightning bolt entity to the world
                 serverLevel.addFreshEntity(lightningBolt);
             }
+
+            ((ServerLevel) this.level()).sendParticles(ModParticles.BISMUTH_PARTICLES.get(),
+                this.getX(), this.getY(), this.getZ(), 100, 0.5, 10, 0.5, 0.2);
+            ((ServerLevel) this.level()).sendParticles(ParticleTypes.EXPLOSION,
+                this.getX(), this.getY(), this.getZ(), 100, 2.0, 0.1, 2.0, 0.2);
 
             // Broadcast event (for client-side effects like particles)
             this.level().broadcastEntityEvent(this, (byte) 3);

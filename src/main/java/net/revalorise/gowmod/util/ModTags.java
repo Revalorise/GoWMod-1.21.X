@@ -10,6 +10,8 @@ import net.revalorise.gowmod.GodOfWarMod;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> NEEDS_BISMUTH_TOOL = createTag("needs_bismuth_tool");
+        public static final TagKey<Block> INCORRECT_FOR_BISMUTH_TOOL = createTag("incorrect_for_bismuth_tool");
 
         private static TagKey<Block> createTag(String tagName) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(GodOfWarMod.MOD_ID, tagName));
