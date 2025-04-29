@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModItems.STARLIGHT_ASHES.get());
 
                 output.accept(ModItems.TOMAHAWK);
+                output.accept(ModItems.LEVIATHAN_AXE);
             })
             .build());
 
@@ -44,6 +45,7 @@ public class ModCreativeModeTabs {
                 output.accept(ModBlocks.BISMUTH_ORE.get());
                 output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
                 output.accept(ModBlocks.MAGIC_BLOCK.get());
+                output.accept(ModBlocks.THUNDER_BLOCK.get());
             })
             .build());
 

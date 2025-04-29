@@ -3,10 +3,13 @@ package net.revalorise.gowmod;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.revalorise.gowmod.block.ModBlocks;
 import net.revalorise.gowmod.entity.ModEntities;
 import net.revalorise.gowmod.entity.client.TomahawkProjectileRenderer;
+import net.revalorise.gowmod.entity.custom.ThunderBlockEntity;
 import net.revalorise.gowmod.item.ModCreativeModeTabs;
 import net.revalorise.gowmod.item.ModItems;
 import net.revalorise.gowmod.particle.BismuthParticles;
@@ -106,4 +109,5 @@ public class GodOfWarMod
             event.registerSpriteSet(ModParticles.BISMUTH_PARTICLES.get(), BismuthParticles.Provider::new);
         }
     }
+
 }

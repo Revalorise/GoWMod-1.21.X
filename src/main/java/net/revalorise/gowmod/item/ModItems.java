@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.revalorise.gowmod.GodOfWarMod;
 import net.revalorise.gowmod.item.custom.ChiselItem;
 import net.revalorise.gowmod.item.custom.FuelItem;
+import net.revalorise.gowmod.item.custom.LeviathanAxeItem;
 import net.revalorise.gowmod.item.custom.TomahawkItem;
 
 import java.util.List;
@@ -42,6 +43,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> TOMAHAWK = ITEMS.register("tomahawk",
         () -> new TomahawkItem(new Item.Properties().durability(1).fireResistant()));
+
+    public static final DeferredItem<Item> LEVIATHAN_AXE = ITEMS.register("leviathan_axe",
+        () -> new LeviathanAxeItem(new Item.Properties().durability(1).fireResistant().attributes(LeviathanAxeItem.createAttributes())));
 
 
     public static void register(IEventBus eventBus) {

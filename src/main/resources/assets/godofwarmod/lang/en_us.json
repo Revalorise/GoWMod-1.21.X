@@ -8,11 +8,13 @@
   "item.godofwarmod.starlight_ashes": "Starlight Ashes",
 
   "item.godofwarmod.tomahawk": "Tomahawk",
+  "item.godofwarmod.leviathan_axe": "Leviathan Axe",
 
   "block.godofwarmod.bismuth_block": "Bismuth Block",
   "block.godofwarmod.bismuth_ore": "Bismuth Ore",
   "block.godofwarmod.bismuth_deepslate_ore": "Bismuth Deepslate Ore",
   "block.godofwarmod.magic_block": "Magic Block",
+  "block.godofwarmod.thunder_block": "Thunder Block",
 
   "creativetab.godofwarmod.bismuth_items": "Bismuth Items",
   "creativetab.godofwarmod.bismuth_blocks": "Bismuth Blocks",
