@@ -7,6 +7,7 @@ import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.revalorise.gowmod.block.ModBlocks;
+import net.revalorise.gowmod.effect.ModEffects;
 import net.revalorise.gowmod.entity.ModEntities;
 import net.revalorise.gowmod.entity.client.TomahawkProjectileRenderer;
 import net.revalorise.gowmod.entity.custom.ThunderBlockEntity;
@@ -61,6 +62,8 @@ public class GodOfWarMod
 
         ModParticles.register(modEventBus);
 
+        ModEffects.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -108,6 +111,7 @@ public class GodOfWarMod
         public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(ModParticles.BISMUTH_PARTICLES.get(), BismuthParticles.Provider::new);
         }
+
     }
 
 }
