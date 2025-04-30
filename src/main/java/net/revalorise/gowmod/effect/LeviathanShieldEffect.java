@@ -17,12 +17,10 @@ public class LeviathanShieldEffect extends MobEffect {
     public void onEffectStarted(LivingEntity entity, int amplifier) {
         super.onEffectAdded(entity, amplifier);
 
-        entity.setAbsorptionAmount(Math.max(entity.getAbsorptionAmount(), 20.0F));
-
         entity.addEffect(new MobEffectInstance(
             MobEffects.DAMAGE_RESISTANCE,
-            200,
-            0,
+            2000,
+            4,
             true,
             false,
             false
@@ -30,8 +28,17 @@ public class LeviathanShieldEffect extends MobEffect {
 
         entity.addEffect(new MobEffectInstance(
             MobEffects.REGENERATION,
-            200,
-            0,
+            2000,
+            4,
+            true,
+            false,
+            false
+        ));
+
+        entity.addEffect(new MobEffectInstance(
+            MobEffects.ABSORPTION,
+            2000,
+            4,
             true,
             false,
             false

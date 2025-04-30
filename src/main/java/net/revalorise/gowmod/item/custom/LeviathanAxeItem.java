@@ -34,9 +34,9 @@ public class LeviathanAxeItem extends Item implements IItemExtension {
     public static final float SMASH_ATTACK_KNOCKBACK_RADIUS = 3.5F;
     private static final float SMASH_ATTACK_KNOCKBACK_POWER = 0.7F;
 
-    private static final int LEVIATHAN_SHIELD_DURATION = 200; // 10 seconds
-    private static final int LEVIATHAN_SHIELD_AMPLIFIER = 5; // Level 3
-    private static final int LEVIATHAN_SHIELD_COOLDOWN_DURATION = 0; // 30 seconds
+    private static final int LEVIATHAN_SHIELD_DURATION = 2000; // 10 seconds
+    private static final int LEVIATHAN_SHIELD_AMPLIFIER = 4; // Level 3
+    private static final int LEVIATHAN_SHIELD_COOLDOWN_DURATION = 200; // 10 seconds
 
     public LeviathanAxeItem(Properties properties) {
         super(properties);
@@ -67,7 +67,6 @@ public class LeviathanAxeItem extends Item implements IItemExtension {
         player.startUsingItem(hand);
 
         if (player.getCooldowns().isOnCooldown(itemstack.getItem())) {
-            player.sendSystemMessage(Component.literal("Leviathan axe shield is on cooldown! Time left: " + player.getCooldowns()));
             return InteractionResultHolder.fail(itemstack);
         } else {
             player.addEffect(new MobEffectInstance(
