@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
 
                 output.accept(ModItems.TOMAHAWK);
                 output.accept(ModItems.LEVIATHAN_AXE);
+                output.accept(ModItems.DRAUPNIR_SPEAR);
             })
             .build());
 
